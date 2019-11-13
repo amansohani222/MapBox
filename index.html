@@ -80,6 +80,10 @@
           prev_marker.remove();
           prev_marker = new mapboxgl.Marker().setLngLat([lon, lat]).addTo(map);
           map.flyTo({ center: [lon, lat] });
+          document.getElementById("info").innerHTML = JSON.stringify({
+            lng: lon,
+            lat: lat
+          });
         });
       }
     </script>
